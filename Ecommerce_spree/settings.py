@@ -89,7 +89,7 @@ WSGI_APPLICATION = 'Ecommerce_spree.wsgi.application'
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql_psycopg2",
-        "NAME": "Ecommerce_spree",
+        "NAME": "spree",
         "USER": "postgres",
         "PASSWORD": "root",
         "HOST": "localhost",
