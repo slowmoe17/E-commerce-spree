@@ -1,4 +1,4 @@
-"""Ecommerce_spree URL Configuration
+"""spree URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.0/topics/http/urls/
@@ -18,7 +18,7 @@ from django.urls import path
 from django.conf.urls import include
 from cart.views import CartListView , CartItemCreateView , checkout
 
-app_name='Ecommerce_spree'
+app_name='spree'
 
 urlpatterns = [
     path('admin/', admin.site.urls),

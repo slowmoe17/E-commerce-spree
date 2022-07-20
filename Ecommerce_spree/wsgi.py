@@ -1,5 +1,5 @@
 """
-WSGI config for Ecommerce_spree project.
+WSGI config for spree project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'Ecommerce_spree.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'spree.settings')
 
 application = get_wsgi_application()
