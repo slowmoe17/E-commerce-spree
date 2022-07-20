@@ -28,7 +28,9 @@ DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
 
-
+CORS_ORIGIN_ALLOW_ALL = True
+MEDIA_URL = 'media/'
+MEDIA_ROOT = 'media'
 # Application definition
 
 INSTALLED_APPS = [
@@ -157,10 +159,9 @@ SIMPLE_JWT = {
     'UPDATE_LAST_LOGIN': False,
 }
 
-import dj_database_url 
+import dj_database_url
 prod_db  =  dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(prod_db)
-
 
 PROJECT_ROOT   =  os.path.join(os.path.abspath(__file__))
 STATIC_ROOT  =   os.path.join(PROJECT_ROOT, 'staticfiles')
