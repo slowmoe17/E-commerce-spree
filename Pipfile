@@ -15,6 +15,7 @@ dj-database-url = "*"
 gunicorn = "*"
 whitenoise = "*"
 django-cors-headers = "*"
+pillow = "*"
 
 [dev-packages]
 
