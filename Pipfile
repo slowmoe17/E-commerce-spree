@@ -16,6 +16,7 @@ gunicorn = "*"
 whitenoise = "*"
 django-cors-headers = "*"
 pillow = "*"
+django-heroku = "*"
 
 [dev-packages]
 
