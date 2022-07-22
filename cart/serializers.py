@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Cart, CartItem , Transaction , OrderStatus
+from .models import Cart, CartItem , Transaction 
 
 
 
@@ -36,9 +36,9 @@ class TransactionSerializer(serializers.ModelSerializer):
     fields = '__all__'
 
 
-class OrderStatusSerializer(serializers.ModelSerializer):
+"""class OrderStatusSerializer(serializers.ModelSerializer):
 
     model = OrderStatus
     fields = '__all__'
-
+"""
        

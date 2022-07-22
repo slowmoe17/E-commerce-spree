@@ -12,11 +12,11 @@ def create_cart(sender, instance, created, **kwargs):
         Cart.objects.create(user=instance)"""
 
 # create cart for each user when user is created
-@receiver(pre_save, sender=get_user_model)
+"""@receiver(pre_save, sender=get_user_model)
 def create_cart(sender, instance, created, **kwargs):
     if created:
         Cart.objects.create(user=instance)
-
+"""
 
     
 

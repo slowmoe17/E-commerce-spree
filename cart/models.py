@@ -37,10 +37,10 @@ def update_total_price(sender, instance, **kwargs):
         cart.total_price += item.total_price
     cart.save()
     
-@receiver(pre_save, sender=get_user_model())
+"""@receiver(pre_save, sender=get_user_model())
 def create_cart(sender, created, **kwargs):
     if created:
-        Cart.objects.create(user=instance)
+        Cart.objects.create(user=instance)"""
 
 
 class Transaction(models.Model):
@@ -65,7 +65,7 @@ def update_total_price(sender, instance, **kwargs):
 
 
 
-class OrderStatus(models.Model):
+"""class OrderStatus(models.Model):
     order_status = (
         ('pending', 'Pending'),
         ('success', 'Success'),
@@ -124,7 +124,7 @@ def create_orderstatus(sender, instance, **kwargs):
 
 
      
-
+"""
 
     
 

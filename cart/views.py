@@ -2,7 +2,7 @@ from multiprocessing import context
 from django.shortcuts import render
 from rest_framework import generics , permissions , status
 from rest_framework.views import APIView
-from .serializers import CartSerializer, CartItemSerializer , TransactionSerializer
+from .serializers import CartSerializer, CartItemSerializer  #TransactionSerializer
 from .models import Cart, CartItem , Transaction
 from rest_framework.response import Response
 from rest_framework.request import Request
@@ -134,20 +134,7 @@ class checkout(APIView):
                 amount = amount,
                 order_id = order_id, )
 
-        # get status from order details 
-        url = f'https://accept.paymobsolutions.com/api/ecommerce/orders/{order_id}'
-        querystring = {"token": token}
-        headers = {
-            'Content-Type': 'application/json'
-        }
-        response = requests.request("GET", url, headers=headers, params=querystring)
-        response = response.json()
-        status = response['status']
-        if status == 'paid':
-            return Response({"status": "success"}, status=status.HTTP_200_OK)
-        else:
-            return Response({"status": "fail"}, status=status.HTTP_200_OK)
-
+       
         
      
 
