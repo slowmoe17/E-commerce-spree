@@ -17,6 +17,15 @@ def send_confirmation_email(user):
     return OTP
 
 
+def send_welcome_email(user):
+    subject = 'Welcome to Spree'
+    message = f'Welcome {user.username} To Spree , you are successfully registered email : {user.email} Password{user.password}, please login to your account to start shopping , Thank you'
+    from_email = django.conf.settings.EMAIL_HOST_USER
+    recipient_list = [user.email]
+    send_mail(subject, message, from_email, recipient_list)
+    return True
+
+
 
 
     

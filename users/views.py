@@ -6,6 +6,7 @@ from rest_framework_simplejwt.exceptions import InvalidToken, TokenError
 from .models import CustomUser
 from rest_framework.views import APIView
 from .mail import send_confirmation_email
+
 class Login(TokenObtainPairView):
     serializer_class = LoginSerializer
     permission_classes = (permissions.AllowAny,)

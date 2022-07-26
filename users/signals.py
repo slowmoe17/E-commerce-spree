@@ -1,7 +1,7 @@
 from django.db.models.signals import post_save
 from django.dispatch import receiver
 from users.models import CustomUser
-from users.mail import send_confirmation_email
+from users.mail import send_confirmation_email , send_welcome_email
 
 
 
@@ -10,6 +10,10 @@ from users.mail import send_confirmation_email
 def send_verification_mail_to_user(sender, instance, created, **kwargs):
     if created:
         send_confirmation_email(instance)
+        print("sent")
+
+    if created : 
+        send_welcome_email(instance)
         print("sent")
     
 
